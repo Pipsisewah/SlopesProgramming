@@ -1,6 +1,32 @@
 import React from 'react';
+const axios = require('axios')
 
 class RegisterComponent extends React.Component {
+
+    async registerUserAxios(){
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/api/register', {
+                    name: 'Testing',
+                    email: 'slopes4@slopesprogramming.com',
+                    password: 'password',
+                }, {
+                    headers: {
+                        'content-type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'accept': 'application/json',
+                    }
+                }
+            );
+            if (response.status === 200) {
+                console.log("User Successfully Created");
+            } else {
+                console.log("Failed To Create User");
+            }
+        }catch (error){
+            console.log("Failed To Create User");
+            console.log(error);
+        }
+    }
 
     render() {
         return (
@@ -15,7 +41,7 @@ class RegisterComponent extends React.Component {
                             <input type="text" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"/>
                             <button type="button"
                                     class="transition duration-200 bg-gray-900 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
-                                    onClick={this.registerUser}>
+                                    onClick={this.registerUserAxios}>
                                 <span class="inline-block mr-2">Register</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor" class="w-4 h-4 inline-block">
@@ -60,7 +86,7 @@ class RegisterComponent extends React.Component {
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                               d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                                     </svg>
-                                    <span class="inline-block ml-1">Back to slopesprogramming.com</span>
+                                    <span class="inline-block ml-1"><a href="/">Back to slopesprogramming.com</a></span>
                                 </button>
                             </div>
                         </div>
