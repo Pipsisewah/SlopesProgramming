@@ -1,10 +1,13 @@
 import React from 'react';
-import RegisterComponentFunction from "../components/RegisterComponentFunction";
+import RegisterComponent from "../components/RegisterComponent";
+import {ToastProvider} from "react-toast-notifications";
 
 
 const Register = ()  => {
     return (
-        <RegisterComponentFunction/>
+        <ToastProvider>
+            <RegisterComponent/>
+        </ToastProvider>
     )
 }
 
