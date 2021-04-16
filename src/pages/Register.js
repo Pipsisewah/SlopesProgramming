@@ -1,9 +1,10 @@
 import React from 'react';
-import RegisterComponent from '../components/RegisterComponent'
+import RegisterComponentFunction from "../components/RegisterComponentFunction";
+
 
 const Register = ()  => {
     return (
-        <RegisterComponent/>
+        <RegisterComponentFunction/>
     )
 }
 
