@@ -37,8 +37,6 @@ function LoginComponent() {
                 }
             );
             if (response.status === 200) {
-                console.log("Successfully Logged In");
-                console.log(response.data.access_token);
                 localStorage.setItem('token', response.data.access_token);
                 addToast("Successfully Logged In!", {
                     appearance: 'success',
