@@ -38,6 +38,7 @@ function LoginComponent() {
             );
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.access_token);
+                window.dispatchEvent(new Event('token'));
                 addToast("Successfully Logged In!", {
                     appearance: 'success',
                     autoDismiss: true,

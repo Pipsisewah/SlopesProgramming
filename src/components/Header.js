@@ -1,11 +1,11 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import LogoutButtonSubComponent from "./subcomponents/LogoutButtonSubComponent";
 import LoginButtonSubComponent from "./subcomponents/LoginButtonSubComponent";
 
 const Header = () => {
 
-    const token = localStorage.getItem('token');
+    const [token, setToken] = useState(localStorage.getItem('token'));
     Header.propTypes = {
         siteTitle: PropTypes.string,
     };
@@ -14,10 +14,17 @@ const Header = () => {
         siteTitle: ``,
     };
 
-    useEffect(() => {
-
+    const setAuthToken = () => {
+        setToken(localStorage.getItem('token'));
         console.log(token);
-    },[token])
+    }
+
+
+
+    useEffect(() => {
+        window.addEventListener('token', setAuthToken);
+        // eslint-disable-next-line
+    }, [])
 
     function Greeting(props) {
         const isLoggedIn = (props.token !== null);
