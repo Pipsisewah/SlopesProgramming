@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import LogoutButtonSubComponent from "./subcomponents/LogoutButtonSubComponent";
 import LoginButtonSubComponent from "./subcomponents/LoginButtonSubComponent";
+import NavResumeOptionsSubComponent from "./subcomponents/NavResumeOptionsSubComponent";
 
 const Header = () => {
 
@@ -24,16 +25,25 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('token', setAuthToken);
         // eslint-disable-next-line
-    }, [])
+    }, []);
 
-    function Greeting(props) {
-        const isLoggedIn = (props.token !== null);
-        console.log(props.token);
-        console.log("Is logged in? " + isLoggedIn);
-        if(isLoggedIn){
+    function isLoggedIn(){
+        console.log("Is logged in? " + (token !== null));
+        return token !== null;
+    }
+
+    function Greeting() {
+        if(isLoggedIn()){
             return <LogoutButtonSubComponent/>
         }
         return <LoginButtonSubComponent/>
+    }
+
+    function NavResumeRoutes(){
+        if(!isLoggedIn()){
+            return "";
+        }
+        return <NavResumeOptionsSubComponent/>
     }
 
         return(
@@ -51,6 +61,7 @@ const Header = () => {
                         </svg>
                     </button>
                 </div>
+                <NavResumeRoutes/>
                 <div className="right-0 block lg:flex">
                     <div className="text-sm lg:flex-grow object-bottom mr-8 ">
                         <a href="/register"
@@ -58,7 +69,7 @@ const Header = () => {
                             Register
                         </a>
                     </div>
-                    <Greeting token={token}/>
+                    <Greeting/>
                 </div>
             </nav>
         </header>
