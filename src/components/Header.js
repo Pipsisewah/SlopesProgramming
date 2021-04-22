@@ -47,7 +47,7 @@ const Header = () => {
     }
 
         return(
-        <header>
+        <header className={"pb-6"}>
             <nav className="flex items-center justify-between flex-wrap bg-white border-b p-4">
                 <div className="flex items-center flex-shrink-0 text-black mr-6">
                     <a href="/" className="font-sans font-light text-xl tracking-tight">Slopes Programming</a>

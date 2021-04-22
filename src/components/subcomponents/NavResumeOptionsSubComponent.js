@@ -16,13 +16,13 @@ function NavResumeOptionsSubComponent(){
                 </a>
             </div>
             <div className="text-sm">
-                <a href="/#"
+                <a href="/projects"
                    className="object-none object-bottom font-thin text-l text-black hover:text-gray-700">
                     Projects
                 </a>
             </div>
             <div className="text-sm">
-                <a href="/#"
+                <a href="/features"
                    className="object-none object-bottom font-thin text-l text-black hover:text-gray-700">
                     Features
                 </a>
