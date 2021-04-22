@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import GetData from "../api/util";
+import FeatureInformationComponent from "../components/FeatureInformationComponent";
 
 const Features = () => {
     const [features, setFeatures] = useState([]);
@@ -17,15 +18,12 @@ const Features = () => {
     function ListFeatures(){
         if(features) {
             return (
-                <div className={"flex items-center flex-col bg-white w-full"}>
+                <div className={"flex items-center flex-col bg-white w-full gap-4"}>
                     {
-                        features.map(feature => {
-                                return (<div className={"max-w-md w-full lg:flex grid w-full grid-rows-3 grid-flow-col shadow-lg gap-4"} key={feature.id}>
-                                    <h4 className={"col-span-3 font-semibold text-lg tracking-wide"}>{feature.name}</h4>
-                                    <p className={"col-span-2 row-span-2 w-full object-center text-gray-500 my-1"}>{feature.description}</p>
-                                </div>)
-                            }
+                        features.map(feature => { return(
+                            <FeatureInformationComponent feature={feature}/>
                         )
+                        })
                     }
                 </div>
             )

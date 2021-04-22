@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import GetData from "../api/util";
+import ProjectInformationComponent from "../components/ProjectInformationComponent";
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
@@ -15,15 +16,12 @@ const Projects = () => {
     function ListProjects(){
         if(projects) {
             return (
-                <div className={"flex items-center flex-col bg-white w-full"}>
+                <div className={"flex items-center flex-col bg-white w-full gap-4"}>
                     {
-                        projects.map(project => {
-                                return (<div className={"max-w-md w-full lg:flex grid w-full grid-rows-3 grid-flow-col shadow-lg gap-4"} key={project.id}>
-                                    <h4 className={"col-span-3 font-semibold text-lg tracking-wide"}>{project.name}</h4>
-                                    <p className={"col-span-2 row-span-2 w-full object-center text-gray-500 my-1"}>{project.description}</p>
-                                </div>)
-                            }
+                        projects.map(project => { return(
+                            <ProjectInformationComponent project={project}/>
                         )
+                        })
                     }
                 </div>
             )
