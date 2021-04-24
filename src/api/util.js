@@ -1,5 +1,4 @@
 import axios from "axios";
-import {stringify} from "postcss";
 
 export async function GetData(endpoint, successCallback){
     try {
@@ -26,9 +25,8 @@ export async function GetData(endpoint, successCallback){
     }
 }
 
-export async function PostData(endpoint, successCallback, postData){
+export async function PostData(endpoint, successCallback, failureCallback, postData){
     try {
-        console.log("Posting data to " + endpoint);
         const token = localStorage.getItem('token');
         const response = await axios.post(
             process.env.REACT_APP_API_URL + endpoint,
@@ -43,17 +41,13 @@ export async function PostData(endpoint, successCallback, postData){
             }
         );
         if (response.status === 200) {
-            console.log(response);
             successCallback(response.data.data);
         }else if(response.status === 201){
-            console.log(response);
             successCallback(response.data);
         } else {
             console.log(endpoint + " did not return a 200");
         }
     }catch (error){
-        console.log("Failed To POST to " + endpoint);
-        console.log(JSON.stringify(error));
-        //showErrorsFromAPI(error?.response?.data?.errors);
+        failureCallback(error?.response?.data?.errors);
     }
 }

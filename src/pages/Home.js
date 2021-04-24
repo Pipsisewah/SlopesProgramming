@@ -10,7 +10,7 @@ const Home = () => {
                         <p className="lg:text-6xl md:text-4xl sm:text-2xl text-black text-center w-full z-10">Your Resume,<br/>Your Story,<br/>Your Future</p>
                     </div>
                     </figcaption>
-                <img src="scrum.jpg" className="w-full filter grayscale blur-sm"/>
+                <img alt="hero" src="scrum.jpg" className="w-full filter grayscale blur-sm"/>
             </div>
         </div>
     );

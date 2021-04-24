@@ -5,7 +5,10 @@ function NewCompanySubComponent() {
     const { addToast } = useToasts();
 
     function createCompany(){
-        PostData('company', handleResponse,
+        PostData(
+            'company',
+            handleSuccessfulResponse,
+            handleFailedResponse,
             {
                 name: document.getElementById("name").value,
                 description: document.getElementById("description").value,
@@ -15,23 +18,30 @@ function NewCompanySubComponent() {
             })
     }
 
-    function handleResponse(data){
+    function handleSuccessfulResponse(data){
         addToast(data.message, {
             appearance: 'success',
             autoDismiss: true,
         });
     }
 
+    function handleFailedResponse(errors){
+        for (let field of Object.keys(errors)){
+            addToast(errors[field][0], {
+                appearance: 'error',
+                autoDismiss: true,
+            });
+        }
+
+    }
+
     return (
-        <div>
-            <div>Create New Company</div>
-
-
-            <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+        <div className="w-full">
+            <section className="w-full p-2 bg-white border border-gray-200 dark:bg-gray-800">
                 <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">New Company</h2>
 
                 <div>
-                    <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-2 mt-4 sm:grid-cols-5">
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" htmlFor="name">Name</label>
                             <input id="name" type="text"
@@ -117,7 +127,7 @@ function NewCompanySubComponent() {
                         </div>
                     </div>
 
-                    <div className="flex justify-end mt-6">
+                    <div className="flex justify-end mt-2">
                         <button
                             className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
                         onClick={createCompany}>Save
