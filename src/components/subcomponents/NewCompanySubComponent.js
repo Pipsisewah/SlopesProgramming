@@ -1,6 +1,8 @@
 import {PostData} from "../../api/util";
+import {useToasts} from "react-toast-notifications";
 
 function NewCompanySubComponent() {
+    const { addToast } = useToasts();
 
     function createCompany(){
         PostData('company', handleResponse,
@@ -14,7 +16,10 @@ function NewCompanySubComponent() {
     }
 
     function handleResponse(data){
-        //setCompanies(data);
+        addToast(data.message, {
+            appearance: 'success',
+            autoDismiss: true,
+        });
     }
 
     return (

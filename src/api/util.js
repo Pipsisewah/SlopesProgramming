@@ -45,6 +45,9 @@ export async function PostData(endpoint, successCallback, postData){
         if (response.status === 200) {
             console.log(response);
             successCallback(response.data.data);
+        }else if(response.status === 201){
+            console.log(response);
+            successCallback(response.data);
         } else {
             console.log(endpoint + " did not return a 200");
         }
