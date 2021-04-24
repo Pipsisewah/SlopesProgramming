@@ -47,7 +47,7 @@ const Header = () => {
     }
 
         return(
-        <header className={"bg-blue-900"}>
+        <header className={"bg-gray-100"}>
             <nav className="grid grid-cols-12 border-b p-4">
                 <div className="col-span-4 text-black mr-6">
                     <a href="/" className="font-sans font-light text-xl tracking-tight">Slopes Programming</a>

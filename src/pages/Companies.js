@@ -19,6 +19,7 @@ const Companies = () => {
             return (
                 <div className={"flex items-center flex-col bg-white w-full gap-4"}>
                     <NewCompanySubComponent/>
+                    <div>Companies</div>
                     {
                         companies.map(company => { return(
                             <CompanyInformationComponent company={company}/>
