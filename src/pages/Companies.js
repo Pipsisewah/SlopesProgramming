@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import GetData from "../api/util";
 import CompanyInformationComponent from "../components/CompanyInformationComponent";
+import NewCompanySubComponent from "../components/subcomponents/NewCompanySubComponent";
 
 const Companies = () => {
     const [companies, setCompanies] = useState([]);
@@ -17,6 +18,7 @@ const Companies = () => {
         if (companies) {
             return (
                 <div className={"flex items-center flex-col bg-white w-full gap-4"}>
+                    <NewCompanySubComponent/>
                     {
                         companies.map(company => { return(
                             <CompanyInformationComponent company={company}/>
@@ -27,7 +29,10 @@ const Companies = () => {
             )
         } else {
             return (
-                <div>Companies</div>
+                <div>
+                    <NewCompanySubComponent/>
+                    <div>Companies</div>
+                </div>
             )
         }
     }

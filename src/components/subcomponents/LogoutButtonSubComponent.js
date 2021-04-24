@@ -10,9 +10,9 @@ function LogoutButtonSubComponent() {
     }
 
     return(
-        <div className="text-sm lg:flex-grow object-bottom mr-8 ">
+        <div className="grid text-sm">
             <a href="/"
-               className="object-none object-bottom font-thin text-l text-black hover:text-gray-700"
+               className="font-thin text-l hover:text-gray-200"
                 onClick={logoutUser}>
                 Logout
             </a>

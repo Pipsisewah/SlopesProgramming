@@ -6,8 +6,8 @@ import {ToastProvider} from "react-toast-notifications";
 function App() {
   return (
       <div className="App">
-          <Header siteTitle={"Slopes Programming"}/>
-        <div class="flex justify-center h-screen">
+          <Header siteTitle/>
+        <div className="flex justify-center h-screen">
             <ToastProvider>
           <Router/>
             </ToastProvider>
