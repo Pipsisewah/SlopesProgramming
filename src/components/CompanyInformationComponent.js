@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {HiOutlineOfficeBuilding} from "react-icons/all";
 
 const CompanyInformationComponent = ({company}) => {
 
