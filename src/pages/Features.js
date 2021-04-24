@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import GetData from "../api/util";
+import {GetData} from "../api/util";
 import FeatureInformationComponent from "../components/FeatureInformationComponent";
 
 const Features = () => {

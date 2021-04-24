@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import GetData from "../api/util";
+import {GetData} from "../api/util";
 import CompanyInformationComponent from "../components/CompanyInformationComponent";
 import NewCompanySubComponent from "../components/subcomponents/NewCompanySubComponent";
 
