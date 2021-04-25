@@ -5,20 +5,27 @@ import NewCompanySubComponent from "../components/subcomponents/NewCompanySubCom
 
 const Companies = () => {
     const [companies, setCompanies] = useState([]);
+    const [industries, setIndustries] = useState([]);
+
 
     useEffect(() => {
-        GetData('company', handleResponse)
+        GetData('company', handleResponse);
+        GetData('industry', storeIndustries);
     }, [])
 
     function handleResponse(data){
         setCompanies(data);
     }
 
+    function storeIndustries(data){
+        setIndustries(data);
+    }
+
     function ListCompanies() {
         if (companies) {
             return (
-                <div className={"flex items-center flex-col bg-white w-full gap-4"}>
-                    <NewCompanySubComponent/>
+                <div className={"flex flex-grow items-center flex-col bg-white w-screen h-screen gap-4"}>
+                    <NewCompanySubComponent industries={industries}/>
                     <div>Companies</div>
                     {
                         companies.map(company => { return(
@@ -31,7 +38,7 @@ const Companies = () => {
         } else {
             return (
                 <div>
-                    <NewCompanySubComponent/>
+                    <NewCompanySubComponent industries={industries}/>
                     <div>Companies</div>
                 </div>
             )

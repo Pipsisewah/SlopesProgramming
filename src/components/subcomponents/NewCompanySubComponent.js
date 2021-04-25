@@ -1,7 +1,8 @@
 import {PostData} from "../../api/util";
 import {useToasts} from "react-toast-notifications";
+import React from "react";
 
-function NewCompanySubComponent() {
+function NewCompanySubComponent(props) {
     const { addToast } = useToasts();
 
     function createCompany(){
@@ -32,8 +33,32 @@ function NewCompanySubComponent() {
                 autoDismiss: true,
             });
         }
-
     }
+
+    function ListIndustries(){
+        if(props.industries) {
+            return (
+                <select id="industry"
+                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    {
+                        props.industries.map(industry => {
+                            return (
+                                <option value={industry.id}>{industry.name}</option>
+                            )
+                        })
+                    }
+                </select>
+            )
+        }else{
+            return (
+                <select id="industry"
+                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    <option>Loading...</option>
+                </select>
+            )
+        }
+    }
+
 
     return (
         <div className="w-full">
@@ -119,11 +144,7 @@ function NewCompanySubComponent() {
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" htmlFor="industry">Industry</label>
-                            <select id="industry"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option value="1">Financial</option>
-                                <option value="2">Software</option>
-                            </select>
+                            <ListIndustries/>
                         </div>
                     </div>
 

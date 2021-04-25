@@ -8,9 +8,11 @@ function App() {
   return (
       <div className="App flex flex-col h-screen justify-between">
           <Header/>
-            <ToastProvider>
-          <Router/>
-            </ToastProvider>
+          <div className="flex-grow min-h-screen">
+                <ToastProvider>
+              <Router/>
+                </ToastProvider>
+          </div>
           <Footer/>
       </div>
   );

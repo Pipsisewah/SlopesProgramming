@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {GetData} from "../api/util";
 import ProjectInformationComponent from "../components/ProjectInformationComponent";
+import NewProjectSubComponent from "../components/subcomponents/NewProjectSubComponent";
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
@@ -16,7 +17,9 @@ const Projects = () => {
     function ListProjects(){
         if(projects) {
             return (
-                <div className={"flex items-center flex-col bg-white w-full gap-4"}>
+                <div className={"flex items-center flex-col bg-white w-screen h-screen gap-4"}>
+                    <NewProjectSubComponent/>
+                    <div>Projects</div>
                     {
                         projects.map(project => { return(
                             <ProjectInformationComponent project={project}/>
@@ -27,7 +30,10 @@ const Projects = () => {
             )
         }else{
             return (
-                <div>Projects</div>
+                <div>
+                    <NewProjectSubComponent/>
+                    <div>Projects</div>
+                </div>
             )
         }
     }
