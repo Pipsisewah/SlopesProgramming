@@ -13,7 +13,7 @@ function App() {
               <Router/>
                 </ToastProvider>
           </div>
-          <Footer/>
+          {/*<Footer/>*/}
       </div>
   );
 }

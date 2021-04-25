@@ -24,6 +24,7 @@ function NewCompanySubComponent(props) {
             appearance: 'success',
             autoDismiss: true,
         });
+        window.dispatchEvent(new Event('refreshCompanies'));
     }
 
     function handleFailedResponse(errors){
@@ -68,26 +69,26 @@ function NewCompanySubComponent(props) {
                 <div>
                     <div className="grid grid-cols-1 gap-2 mt-4 sm:grid-cols-5">
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="name">Name</label>
+                            <label className="text-gray-700 dark:text-gray-200 text-sm" htmlFor="name">Name</label>
                             <input id="name" type="text"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="description">Description</label>
+                            <label className="text-gray-700 dark:text-gray-200 text-sm" htmlFor="description">Description</label>
                             <input id="description" type="text"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="city">City</label>
+                            <label className="text-gray-700 dark:text-gray-200 text-sm" htmlFor="city">City</label>
                             <input id="city" type="text"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="state">State</label>
-                            <select id="state" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <label className="text-gray-700 dark:text-gray-200 text-sm" htmlFor="state">State</label>
+                            <select id="state" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm">
                                 <option value="AL">AL</option>
                                 <option value="AK">AK</option>
                                 <option value="AR">AR</option>
@@ -143,7 +144,7 @@ function NewCompanySubComponent(props) {
                             </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="industry">Industry</label>
+                            <label className="text-gray-700 dark:text-gray-200 text-sm" htmlFor="industry">Industry</label>
                             <ListIndustries/>
                         </div>
                     </div>
