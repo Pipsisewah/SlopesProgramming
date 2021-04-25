@@ -8,8 +8,10 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-toast-notifications": "^2.4.3",
@@ -18,8 +20,10 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "build:production": "env-cmd -f .env.production craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build/ s3://slopesprogramming.com"
   },
   "eslintConfig": {
     "extends": [

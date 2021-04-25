@@ -1,12 +1,9 @@
 import React from "react";
-import {useHistory} from "react-router-dom";
 
 function LogoutButtonSubComponent() {
-    let history = useHistory();
 
     function logoutUser(){
         localStorage.removeItem('token');
-        //history.push("/");
     }
     if(localStorage.getItem('token') !== null) {
         return (

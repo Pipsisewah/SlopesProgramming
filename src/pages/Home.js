@@ -1,16 +1,14 @@
 import React from 'react';
+import ResumeImage from "../svg/ResumeImage";
 
 const Home = () => {
     return (
         <div>
             <div className="w-full h-full gap-4">
-
-                <figcaption className="absolute text-lg mt-32 text-white px-4 w-full z-10">
-                    <div className="w-1/2 bg-white bg-opacity-50 shadow-md">
-                        <p className="lg:text-6xl md:text-4xl sm:text-2xl text-black text-center w-full z-10">Your Resume,<br/>Your Story,<br/>Your Future</p>
-                    </div>
+                <figcaption className="absolute text-lg text-white px-4 md:pl-16 md:pt-16 w-full z-10">
+                        <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black text-center w-full z-10">Your Resume,<br/>Your Story,<br/>Your Future</p>
                     </figcaption>
-                <img alt="hero" src="scrum.jpg" className="w-full filter grayscale blur-sm"/>
+                <ResumeImage/>
             </div>
         </div>
     );

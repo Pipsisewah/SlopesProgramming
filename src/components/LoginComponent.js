@@ -73,7 +73,7 @@ function LoginComponent() {
                         <label class="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
                         <input type="password" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" onChange={(event) => setPassword(event.target.value)}/>
                         <button type="button"
-                                class="transition duration-200 bg-gray-900 hover:bg-blue-900 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+                                class="transition duration-200 bg-gray-900 text-white hover:bg-blue-900 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
                                 onClick={loginUser}>
                             <span class="inline-block mr-2">Login</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

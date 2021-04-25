@@ -41,17 +41,32 @@ const Header = () => {
     }
 
     function MenuOptions(){
+        if(localStorage.getItem('token') !== null) {
+            return (
+                <div className="md:flex">
+                    <MenuOptionItems/>
+                    <LogoutButtonSubComponent/>
+                </div>
+            )
+        }else{
+            return (
+                <div className="md:flex">
+                    <RegisterButtonSubComponent/>
+                    <LoginButtonSubComponent/>
+                </div>
+            )
+        }
+    }
+
+    function MenuOptionItems(){
         return (
             <div className="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
-                <a href="/companies"
-                   className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Companies</a>
-                <a href="/projects"
-                   className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Projects</a>
-                <a href="/features"
-                   className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Features</a>
-                <RegisterButtonSubComponent/>
-                <LoginButtonSubComponent/>
-                <LogoutButtonSubComponent/>
+            <a href="/companies"
+            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Companies</a>
+            <a href="/projects"
+            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Projects</a>
+            <a href="/features"
+            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Features</a>
             </div>
         )
     }
@@ -82,7 +97,7 @@ const Header = () => {
             <div className="container px-6 py-3 mx-auto md:flex">
                 <div className="flex items-center justify-between">
 
-                    <div>
+                    <div className="md:flex">
                         <a className="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300"
                            href="/">Slopes Programming</a>
                     </div>
