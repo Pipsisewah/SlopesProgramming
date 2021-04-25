@@ -1,7 +1,8 @@
 import {PostData} from "../../api/util";
 import {useToasts} from "react-toast-notifications";
+import React from "react";
 
-function NewProjectSubComponent() {
+function NewProjectSubComponent(props) {
     const { addToast } = useToasts();
 
     function createProject(){
@@ -23,6 +24,7 @@ function NewProjectSubComponent() {
             appearance: 'success',
             autoDismiss: true,
         });
+        window.dispatchEvent(new Event('refreshProjects'));
     }
 
     function handleFailedResponse(errors){
@@ -32,7 +34,30 @@ function NewProjectSubComponent() {
                 autoDismiss: true,
             });
         }
+    }
 
+    function ListCompanies(){
+        if(props.companies) {
+            return (
+                <select id="company"
+                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    {
+                        props.companies.map(company => {
+                            return (
+                                <option value={company.id}>{company.name}</option>
+                            )
+                        })
+                    }
+                </select>
+            )
+        }else{
+            return (
+                <select id="company"
+                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    <option>Loading...</option>
+                </select>
+            )
+        }
     }
 
     return (
@@ -68,11 +93,7 @@ function NewProjectSubComponent() {
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" htmlFor="company">Company</label>
-                            <select id="company"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                                <option value="1">Financial</option>
-                                <option value="2">Software</option>
-                            </select>
+                            <ListCompanies/>
                         </div>
                     </div>
 
