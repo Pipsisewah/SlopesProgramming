@@ -53,7 +53,7 @@ function NewProjectSubComponent(props) {
         }else{
             return (
                 <select id="company"
-                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm">
                     <option>Loading...</option>
                 </select>
             )
@@ -62,37 +62,37 @@ function NewProjectSubComponent(props) {
 
     return (
         <div className="w-full">
-            <section className="w-full p-2 bg-white border border-gray-200 dark:bg-gray-800">
-                <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">New Project</h2>
+            <section className="w-full bg-gray-600 p-2 border border-gray-200 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-white capitalize dark:text-white">New Project</h2>
 
                 <div>
                     <div className="grid grid-cols-1 gap-2 mt-4 sm:grid-cols-5">
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="name">Name</label>
+                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="name">Name</label>
                             <input id="name" type="text"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="description">Description</label>
+                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="description">Description</label>
                             <input id="description" type="text"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="startDate">Start Date</label>
+                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="startDate">Start Date</label>
                             <input id="startDate" type="date"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="endDate">End Date</label>
+                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="endDate">End Date</label>
                             <input id="endDate" type="date"
-                                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"/>
+                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
                             </div>
 
                         <div>
-                            <label className="text-gray-700 dark:text-gray-200" htmlFor="company">Company</label>
+                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="company">Company</label>
                             <ListCompanies/>
                         </div>
                     </div>

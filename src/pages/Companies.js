@@ -28,7 +28,7 @@ const Companies = () => {
     function ListCompanies() {
         if (companies) {
             return (
-                <div className={"flex flex-grow flex-col bg-white w-screen h-screen gap-4"}>
+                <div className={"bg-white flex flex-grow flex-col w-screen gap-4"}>
                     <NewCompanySubComponent industries={industries}/>
                     <div className="w-screen">
                         <div className="text-4xl font-semibold pb-4">Companies</div>
