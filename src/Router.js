@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Companies from "./pages/Companies";
 import Projects from "./pages/Projects";
 import Features from "./pages/Features";
+import Account from "./pages/Account";
 
 const Router = () => {
     return (
@@ -17,6 +18,7 @@ const Router = () => {
                         <Route path="/companies" component={Companies} exact/>
                         <Route path="/projects" component={Projects} exact/>
                         <Route path="/features" component={Features} exact/>
+                        <Route path="/account" component={Account} exact/>
                         <Route component={Error}/>
                     </Switch>
             </BrowserRouter>
