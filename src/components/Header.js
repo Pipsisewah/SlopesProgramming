@@ -60,15 +60,15 @@ const Header = () => {
         return (
             <div className="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
             <a href="/portfolio"
-               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Portfolio</a>
+               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-blue-base hover:text-gray-100 md:mx-2">Portfolio</a>
             <a href="/companies"
-            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Companies</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-blue-base hover:text-gray-100 md:mx-2">Companies</a>
             <a href="/projects"
-            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Projects</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-blue-base hover:text-gray-100 md:mx-2">Projects</a>
             <a href="/features"
-            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Features</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-blue-base hover:text-gray-100 md:mx-2">Features</a>
             <a href="/account"
-               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Account</a>
+               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-blue-base hover:text-gray-100 md:mx-2">Account</a>
             </div>
 
         )
@@ -102,7 +102,7 @@ const Header = () => {
 
                     <div className="w-44">
                         <a className="font-thin text-l text-gray-800 dark:text-white md:text-l hover:text-gray-700 dark:hover:text-gray-300"
-                           href="/">Slopes Programming</a>
+                           href="/">Slopes <span className="text-blue-base">Programming</span></a>
                     </div>
 
 
