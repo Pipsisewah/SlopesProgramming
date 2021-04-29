@@ -26,14 +26,12 @@ const Header = () => {
             return (
                 <div className="w-full md:flex md:items-center md:justify-between">
                     <MenuOptions/>
-                    <MenuSearch/>
                 </div>
             )
         }else{
             return (
                 <div className="hidden w-full md:flex md:items-center md:justify-between">
                     <MenuOptions/>
-                    <MenuSearch/>
                 </div>
             )
         }
@@ -62,15 +60,15 @@ const Header = () => {
         return (
             <div className="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
             <a href="/portfolio"
-               className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Portfolio</a>
+               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Portfolio</a>
             <a href="/companies"
-            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Companies</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Companies</a>
             <a href="/projects"
-            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Projects</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Projects</a>
             <a href="/features"
-            className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Features</a>
+            className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Features</a>
             <a href="/account"
-               className="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Account</a>
+               className="px-2 py-1 text-sm text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Account</a>
             </div>
 
         )
@@ -89,7 +87,7 @@ const Header = () => {
                     </span>
 
                 <input type="text"
-                       className="w-full py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                       className="w-full py-1 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                        placeholder="Search"/>
             </div>
         )
@@ -102,8 +100,8 @@ const Header = () => {
             <div className="container px-6 py-3 mx-auto md:flex">
                 <div className="flex items-center justify-between">
 
-                    <div className="md:flex">
-                        <a className="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300"
+                    <div className="w-44">
+                        <a className="font-thin text-l text-gray-800 dark:text-white md:text-l hover:text-gray-700 dark:hover:text-gray-300"
                            href="/">Slopes Programming</a>
                     </div>
 

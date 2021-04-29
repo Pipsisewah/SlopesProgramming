@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {AiOutlineProject} from "react-icons/all";
 
 const ProjectInformationComponent = ({project}) => {
 
