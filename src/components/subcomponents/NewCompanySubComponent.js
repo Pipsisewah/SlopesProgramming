@@ -40,7 +40,7 @@ function NewCompanySubComponent(props) {
         if(props.industries) {
             return (
                 <select id="industry"
-                        className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm">
                     {
                         props.industries.map(industry => {
                             return (
@@ -53,7 +53,7 @@ function NewCompanySubComponent(props) {
         }else{
             return (
                 <select id="industry"
-                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm">
                     <option>Loading...</option>
                 </select>
             )
@@ -63,32 +63,32 @@ function NewCompanySubComponent(props) {
 
     return (
         <div className="w-full">
-            <section className="w-full p-2 bg-gray-600 border border-gray-200 dark:bg-gray-800">
-                <h2 className="text-lg text-white font-semibold capitalize dark:text-white">New Company</h2>
+            <section className="w-full bg-white p-1 bg-white border border-gray-200 dark:bg-gray-800">
+                <div className="text-lg text-gray-700 font-light dark:text-white">new company</div>
 
                 <div>
-                    <div className="grid grid-cols-1 gap-2 mt-4 sm:grid-cols-5">
+                    <div className="grid grid-cols-1 sm:gap-12 mt-2 sm:grid-cols-5">
                         <div>
-                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="name">Name</label>
+                            <label className="font-light text-gray-700 dark:text-gray-200 text-sm" htmlFor="name">Name</label>
                             <input id="name" type="text"
-                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
+                                   className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="description">Description</label>
+                            <label className="font-light text-gray-700 dark:text-gray-200 text-sm" htmlFor="description">Description</label>
                             <input id="description" type="text"
-                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
+                                   className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="font-medium text-white dark:text-gray-200 text-sm" htmlFor="city">City</label>
+                            <label className="font-light text-gray-700 dark:text-gray-200 text-sm" htmlFor="city">City</label>
                             <input id="city" type="text"
-                                   className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm"/>
+                                   className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm"/>
                         </div>
 
                         <div>
-                            <label className="font-medium  text-white dark:text-gray-200 text-sm" htmlFor="state">State</label>
-                            <select id="state" className="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring text-sm">
+                            <label className="font-light text-gray-700 dark:text-gray-200 text-sm" htmlFor="state">State</label>
+                            <select id="state" className="text-sm block w-full px-2 py-1 mt-2 text-gray-700 bg-white border-b-2 border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-gray-500 dark:focus:border-gray-500 focus:outline-none focus:ring text-sm">
                                 <option value="AL">AL</option>
                                 <option value="AK">AK</option>
                                 <option value="AR">AR</option>
@@ -144,14 +144,14 @@ function NewCompanySubComponent(props) {
                             </div>
 
                         <div>
-                            <label className="font-medium text-white text-sm dark:text-gray-200 text-sm" htmlFor="industry">Industry</label>
+                            <label className="font-light text-gray-700 text-sm dark:text-gray-200 text-sm" htmlFor="industry">Industry</label>
                             <ListIndustries/>
                         </div>
                     </div>
 
                     <div className="flex justify-end mt-2">
                         <button
-                            className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900"
+                            className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-base rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-500"
                         onClick={createCompany}>Save
                         </button>
                     </div>

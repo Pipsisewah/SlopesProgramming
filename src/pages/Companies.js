@@ -28,12 +28,11 @@ const Companies = () => {
     function ListCompanies() {
         if (companies) {
             return (
-                <div className={"bg-white flex flex-grow flex-col w-screen gap-4"}>
+                <div className={"bg-gray-light flex flex-grow flex-col w-screen gap-4"}>
                     <NewCompanySubComponent industries={industries}/>
                     <div className="w-screen">
-                        <div className="text-4xl font-semibold pb-4">Companies</div>
+                        <div className="text-lg text-gray-700 font-light dark:text-white pb-4">companies</div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto">
-                            <CompanyImage/>
                             <div>
                             {
                                 companies.map(company => { return(
@@ -42,6 +41,7 @@ const Companies = () => {
                                 })
                             }
                             </div>
+                            <CompanyImage/>
                         </div>
                     </div>
                 </div>
